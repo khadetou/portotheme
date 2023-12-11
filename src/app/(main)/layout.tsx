@@ -8,7 +8,7 @@ export default function PageLayout({
 }) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       {children}
       <Footer />
     </>

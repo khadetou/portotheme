@@ -46,28 +46,35 @@ module.exports = {
         "8xl": "100rem",
       },
       screens: {
+        maxsmall: { max: "479px" },
+        maxsm: { max: "575px" },
+        maxmd: { max: "768px" },
+        maxmedium: { max: "767px" },
+        maxmdlg: { max: "991px" },
+        maxlg: { max: "1199px" },
+        maxxl: { max: "1300px" },
+        xl: "1200px",
+        mdlg: "992px",
         "2xsmall": "320px",
+        xs: "480px",
         xsmall: "512px",
+        minsm: "576px",
         small: "1024px",
         medium: "1280px",
-        large: "1440px",
-        xlarge: "1680px",
-        "2xlarge": "1920px",
+        large: "1320px",
+        xlarge: "1600px",
+        "2xlarge": "1921px",
       },
       fontSize: {
         "3xl": "2rem",
+        "size-inherit": "inherit",
+      },
+      fontWeight: {
+        inherit: "inherit",
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
+        sans: ["var(--font-poppins)"],
+        mono: ["var(--font-roboto-mono)"],
       },
       keyframes: {
         ring: {
@@ -139,6 +146,14 @@ module.exports = {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        showMsgFirst: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        showMsg: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         ring: "ring 2.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
@@ -154,6 +169,8 @@ module.exports = {
         enter: "enter 200ms ease-out",
         "slide-in": "slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)",
         leave: "leave 150ms ease-in forwards",
+        showMsgFirstAnim:
+          "6s linear 2s 1 showMsgFirst, 12s linear 8s infinite showMsg",
       },
     },
   },

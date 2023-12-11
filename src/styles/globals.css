@@ -2,6 +2,74 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html {
+  font-size: 62.5%;
+  font-size-adjust: 100%;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page-wrapper {
+  transition: margin 0.4s, opacity 0.5s;
+}
+
+.containers,
+.container-fluid {
+  @apply w-full px-5 mx-auto maxsmall:px-[15px];
+}
+
+.containers {
+  @apply max-w-[1820px];
+}
+
+.containers {
+  @apply max-w-[1420px];
+}
+
+@media (max-width: 991px) {
+  .sidebar-active .page-wrapper {
+    margin-left: 310px;
+    margin-right: -310px;
+  }
+  .right-sidebar-active .page-wrapper {
+    margin-left: -310px;
+    margin-right: 310px;
+  }
+}
+
+@media (max-width: 479px) {
+  .sidebar-active .page-wrapper {
+    margin-left: 27rem;
+    margin-right: -27rem;
+  }
+  .right-sidebar-active .page-wrapper {
+    margin-left: -27rem;
+    margin-right: 27rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar-active .page-wrapper {
+    margin-left: 310px;
+    margin-right: -310px;
+  }
+  .right-sidebar-active .page-wrapper {
+    margin-left: -310px;
+    margin-right: 310px;
+  }
+}
+
+.mmenu-active .page-wrapper {
+  margin-left: 296px;
+  margin-right: -296px;
+}
+
+body:not(.loaded) {
+  @apply transition-none;
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
